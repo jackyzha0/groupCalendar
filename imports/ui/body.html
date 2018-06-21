@@ -1,0 +1,66 @@
+<head>
+  <title>Meteor Event Scheduler</title>
+  <meta charset='utf-8' />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link href='fullcalendar.css' rel='stylesheet' />
+  <link href='scheduler.css' rel='stylesheet' />
+  <script src='moment.js'></script>
+  <script src='jquery.js'></script>
+  <script src='fullcalendar.js'></script>
+  <script src='scheduler.js'></script>
+</head>
+
+<body>
+  <div class="container">
+      <header>
+        <h1>Group Calendar</h1>
+        <p>A place to track everyone's schedules</p>
+        {{> loginButtons}}
+        {{> curr_user}}
+        <hr>
+      </header>
+      <div class='inviteBox'>
+        <h2>People with access to your calendar</h2>
+        <button class="newCol">Randomize Colour</button>
+        <form class="new-perm">
+          <input type="text" name="text" placeholder="Invite someone to view your calendar" />
+        </form>
+        {{> perms}}
+        <div class='spacer'>
+          <hr>
+        </div>
+      </div>
+      <div id='calendar' class='calendar'></div>
+  </div>
+</body>
+
+<template name="curr_user">
+  <ribbon>
+    {{#if currentUser}}
+      <p4>Invite Code: {{getID}}</p4>
+      <p3>Hello, {{firstName}}!</p3>
+      <p2><img src="{{photoURL}}" width=50> </p2>
+      <script>{{update}}</script>
+    {{else}}
+      <p1>Please sign into a Google Account to import your calendar.</p1>
+      <script>{{update}}</script>
+    {{/if}}
+  </ribbon>
+</template>
+
+<template name="perms">
+  <ul>
+    {{#each getpermList}}
+      {{> disp_perms}}
+    {{/each}}
+  </ul>
+</template>
+
+<template name="disp_perms">
+  <li>
+    <button class="delete">&times;</button>
+    <span class="id">{{id}}</span>
+    <span class="time">{{time}}</span>
+  </li>
+</template>

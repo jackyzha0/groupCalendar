@@ -1,0 +1,186 @@
+/* CSS declarations go here */
+body {
+  font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+  background-color: #383131;
+  background-attachment: fixed;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: 0;
+  margin: 0;
+
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100%;
+  background: white;
+}
+
+.inviteBox {
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100%;
+  background: white;
+}
+
+.calendar {
+  max-width: 95%;
+  margin: auto;
+}
+
+header {
+  background: #ffffff;
+  padding: 20px 15px 15px 15px;
+  position: relative;
+}
+
+ribbon {
+  padding: 10px 0px 5px 0px;
+  position: relative;
+  bottom: 20px;
+  float: right;
+  margin-left: -15px;
+  display: inline-block;
+}
+
+h1 {
+  font-size: 30px;
+  margin: 0px 0px 40px 10px;
+  display: inline-block;
+  margin-right: 1em;
+}
+
+h2 {
+  font-size: 18px;
+  margin: 0px 0px 40px 30px;
+  display: inline-block;
+  margin-right: 1em;
+}
+
+p {
+  font-size: 12px;
+  margin: 0;
+  padding: -10px 0px 10px 10px;
+  display: inline-block;
+  margin-right: 1em;
+}
+
+p1 {
+  font-size: 16px;
+  padding: 20px 0px 0px 30px;
+  display: inline-block;
+  margin-right: 1em;
+}
+
+p3 {
+  font-size: 16px;
+  position: relative;
+  bottom: 15px;
+  display: inline-block;
+  padding: 0px 0px 0px 20px;
+  margin-right: 1em;
+}
+
+p4 {
+  font-size: 16px;
+  position: relative;
+  padding: 0px 20px 0px 20px;
+  bottom: 15px;
+  display: inline-block;
+}
+
+header .google_auth {
+  display: block;
+  float: right;
+}
+
+hr {
+  position: relative;
+  bottom: 10px;
+  right: 15px;
+  margin-top: 0;
+  width: 1398px;
+}
+
+hr1 {
+  position: relative;
+  margin-top: 0;
+  width: 1398px;
+}
+
+button {
+  position: relative;
+  float: right;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  font-size: 1em;
+}
+
+.new-perm input {
+  position: relative;
+  left: 400px;
+  bottom: 60px;
+  padding: 10px 0px 10px 30px;
+  margin-top: -50px;
+  margin-left: 15px;
+  margin-bottom: 30px;
+  background: #dae1ed;
+  border: none;
+  width: 400px;
+  font-size: 1em;
+}
+
+.new-perm input:focus{
+  outline: 0;
+}
+
+ul {
+  position: relative;
+  float: none;
+  bottom: 80px;
+  margin: 0;
+  background: white;
+}
+
+li .delete {
+  position: absolute;
+  float: left;
+  font-weight: bold;
+  background: none;
+  font-size: 48;
+  border: none;
+}
+
+li {
+  position: relative;
+  list-style: none;
+  right: 20px;
+  padding: 10px 10px 10px 10px;
+  border-bottom: #eee solid 1px;
+}
+
+li .time {
+  float: right;
+}
+
+li .id {
+  margin-left: 40px;
+}
+
+.spacer {
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100%;
+  background: transparent;
+  position: relative;
+  left: 15px;
+  bottom: 60px;
+  padding-bottom: -50px;
+}
